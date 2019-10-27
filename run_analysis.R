@@ -97,7 +97,7 @@ All <- merge(activity, All, by = "activity_ID", all = TRUE)
 # consistent and readable
 colnames(All) <- gsub("-", "_", colnames(All))
 
-# Replace 
+# Replace commas with underscores
 colnames(All) <- gsub(",", "_", colnames(All))
 
 # Remove parentheses '()'
@@ -114,7 +114,7 @@ colnames(All) <- gsub("BodyBody", "Body", colnames(All))
 
 
 
-########################################################
+######################################################################################
 ## 5. From the data set in step 4, create a second, independent tidy data set with the
 ##    average of each variable for each activity and each subject.
 
@@ -130,4 +130,4 @@ All_average <- All %>%
     summarize_each(list(mean = mean))
 
 # Export 'All_average' as .txt table that can be uploaded during assignment submission
-write.table(All, file = "run_data_summary.txt", row.name = FALSE)
+write.table(All_average, file = "run_data_summary.txt", row.name = FALSE)
