@@ -35,3 +35,4 @@ UCI HAR Dataset/train/X_train.txt
 UCI HAR Dataset/train/y_train.txt
 Wearable_Computing.Rproj
 WearableComputing.Rproj
+variable_names.txt
