@@ -32,3 +32,5 @@ UCI HAR Dataset/train/Inertial Signals/total_acc_z_train.txt
 UCI HAR Dataset/train/subject_train.txt
 UCI HAR Dataset/train/X_train.txt
 UCI HAR Dataset/train/y_train.txt
+Wearable_Computing.Rproj
+WearableComputing.Rproj

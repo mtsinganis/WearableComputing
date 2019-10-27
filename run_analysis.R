@@ -1,13 +1,13 @@
-##########################################
+###########################################
 ## Getting and Cleaning Data Course Project
-##########################################
+###########################################
 
 # Load 'here' package. The project's root directory is assigned in the beginning so that
 # all file paths can be specified relative to that root directory. This allows one to
 # share the script in such a way that it can be run on any user's machine without having
 # to edit the file paths
 
-library(here)
+if (!require('here')) install.packages('here'); library('here')
 set_here()
 
 # Download and unzip project's data
@@ -112,11 +112,10 @@ colnames(All) <- gsub("BodyBody", "Body", colnames(All))
 ## 5. From the data set in step 4, create a second, independent tidy data set with the
 ##    average of each variable for each activity and each subject.
 
-library(dplyr)
+if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
 All <- tbl_df(All)
 All %>%
     group_by(activity_name, subject_ID) %>%
         summarize_each(list(mean = mean))
 
 write.table(All, file = "run_data_summary.txt", row.name = FALSE)
-
