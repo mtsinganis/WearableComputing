@@ -119,9 +119,15 @@ colnames(All) <- gsub("BodyBody", "Body", colnames(All))
 ##    average of each variable for each activity and each subject.
 
 if (!require('dplyr')) install.packages('dplyr'); library('dplyr')
-All <- tbl_df(All)
-All %>%
-    group_by(activity_name, subject_ID) %>%
-        summarize_each(list(mean = mean))
 
+# Convert 'All' to tibble
+All <- tbl_df(All)
+
+# Group 'All' by activity and subject and calculate average of each variable by groups.
+# The result is saved in a new tibble which can then be exported
+All_average <- All %>%
+    group_by(activity_name, subject_ID) %>%
+    summarize_each(list(mean = mean))
+
+# Export 'All_average' as .txt table that can be uploaded during assignment submission
 write.table(All, file = "run_data_summary.txt", row.name = FALSE)
