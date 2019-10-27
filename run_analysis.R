@@ -54,6 +54,8 @@ my_filter <- grep("[Mm]ean|std", names(train_and_test))
 # Subset main data set by 'my_filter' to keep variables referring to means and stds
 train_and_test <- train_and_test[,my_filter]
 
+
+
 ###########################################################################
 ## 3. Use descriptive activity names to name the activities in the data set
 
@@ -86,6 +88,8 @@ activity$activity_name <- tolower(activity$activity_name)
 # Merge the 'activity' table with the main dataset ('All')
 All <- merge(activity, All, by = "activity_ID", all = TRUE)
 
+
+
 #####################################################################
 ## 4.Appropriately label the data set with descriptive variable names
 
@@ -107,6 +111,8 @@ colnames(All) <- gsub("\\(|\\)", "_", colnames(All))
 
 # Remove repeats of 'Body'
 colnames(All) <- gsub("BodyBody", "Body", colnames(All))
+
+
 
 ########################################################
 ## 5. From the data set in step 4, create a second, independent tidy data set with the
