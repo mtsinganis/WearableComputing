@@ -2,11 +2,11 @@
 
 ## Variables
 
--subject_ID
--tBodyAcc_mean_X
--tBodyAcc_mean_Y
--tBodyAcc_mean_Z
--tBodyAcc_std_X
+- subject_ID
+- tBodyAcc_mean_X
+- tBodyAcc_mean_Y
+- tBodyAcc_mean_Z
+- tBodyAcc_std_X
 -tBodyAcc_std_Y
 -tBodyAcc_std_Z
 -tGravityAcc_mean_X
