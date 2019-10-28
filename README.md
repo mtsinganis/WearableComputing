@@ -23,3 +23,6 @@ The `run_analysis.R` does the following:
 4. Appropriately labels the data set with descriptive activity names. 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+### Running the script
+
+The 'here' R package has been used in order to make all file paths in the script relative. This means that any user can source the `run_analysis.R` script in their machine and be able to run it in their working directory of choice without having to edit any file paths to match the directory structure in their machine. The current script will download, unzip and import all the data sets and preserve the order directory structure in the original data set.
