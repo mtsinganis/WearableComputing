@@ -66,12 +66,12 @@ For each record it is provided:
 - An identifier of the subject who carried out the experiment.
     +Integer
 - The activity name:
-    +WALKING
-    +WAKING_UPSTAIRS
-    +WALKING_DOWNSTAIRS
-    +SITTING
-    +STANDNG
-    +LAYING
+    *WALKING
+    *WAKING_UPSTAIRS
+    *WALKING_DOWNSTAIRS
+    *SITTING
+    *STANDNG
+    *LAYING
 - The average of each meassurament for each subject and each activity
     +Numeric
 
