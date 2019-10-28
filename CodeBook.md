@@ -24,13 +24,13 @@ The process consists in:
 
 * Getting data
     * First of all
-        * y_train.txt and y_test.txt : Performed and measured activities
+        * 'y_train.txt' and 'y_test.txt' : Performed and measured activities
             * Single column .txt file
-        * subject_train.txt and subject_test.txt : Individuals participating in tests (represented by a number)
+        * 'subject_train.txt' and 'subject_test.txt' : Individuals participating in tests (represented by a number)
             * Single column .txt file
-        * features.txt : Names of measurements
+        * 'features.txt' : Names of measurements
             * Single column .txt file 
-        * X_train.txt and X_test.txt : Measurements
+        * 'X_train.txt' and 'X_test.txt' : Measurements
             * 561-column .txt file
 * Merging dataset
     * Training and Test datasets are merged
@@ -52,9 +52,9 @@ The process consists in:
 
 ### Tidydata
 
-The tidydata set is a text csv file (generated through write.table() function)
+The 'run_data_summary' data set is a text file (generated through write.table() function with row.name = FALSE)
 
-* Filename: tidydata.txt
+* Filename: 'run_data_summary.txt'
     * File contains header
     * ';' separated file
     * '"' quote charater
