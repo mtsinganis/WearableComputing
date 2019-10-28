@@ -91,7 +91,7 @@ All <- merge(activity, All, by = "activity_ID", all = TRUE)
 
 
 #####################################################################
-## 4.Appropriately label the data set with descriptive variable names
+## 4. Appropriately label the data set with descriptive variable names
 
 # Replace hyphens '-' with underscores '_' to keep the variable name formatting
 # consistent and readable
