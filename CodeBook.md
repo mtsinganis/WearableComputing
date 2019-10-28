@@ -1,6 +1,6 @@
 # Codebook
 
-## Data source variables
+## Data sources and experiment background
 
 * Original experiment description
     * [Human Activity Recognition Using Smartphones Experiment](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
@@ -18,7 +18,7 @@ Original data and experiment description
 
 First, data are retrieved from [Human Activity Recognition Using Smartphones Data Set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-Original dataset is split into 2 distinct datasets (one for training (70% of original data), the other for testing (30% remaining))
+Original dataset is, by design, split into 2 distinct datasets (one for training (70% of original data), the other for testing (30% remaining))
 
 The process consists in:
 
@@ -46,13 +46,12 @@ The process consists in:
     * **Grouped by subject and activity**
     * **Get average values for each mean and standard deviation measurements**
 
-**For step by step and scripts description, please consult our README.md file**
 
 ## CodeBook : Tidy dataset description - Features
 
-### Tidydata
+### `run_data_summary.txt`
 
-The `run_data_summary` data set is a text file (generated through write.table() function with row.name = FALSE)
+The `run_data_summary.txt` data set is a text file (generated through write.table() function with row.name = FALSE)
 
 * Filename: `run_data_summary.txt`
     * File contains header
@@ -62,9 +61,8 @@ The `run_data_summary` data set is a text file (generated through write.table() 
 * Rows : 180 observations (plus header line)
 
 For each record it is provided:
-
-- An identifier of the subject who carried out the experiment.
-    +Integer
+- The activity code.
+    +integer
 - The activity name:
     *WALKING
     *WAKING_UPSTAIRS
@@ -72,14 +70,16 @@ For each record it is provided:
     *SITTING
     *STANDNG
     *LAYING
-- The average of each meassurament for each subject and each activity
+- An identifier of the subject who carried out the experiment.
+    +Integer    
+- The average of each measurement for each subject and each activity
     +Numeric
 
 ### Features
 
 * `activity_ID`
     * Measured activity ID tag
-    * Field does not contain real name but an Id tag
+    * Field does not contain real name but an ID tag
         * Its range is from 1 to 6
     * Type : integer
     * Unit : NA, identifier
@@ -96,7 +96,7 @@ For each record it is provided:
     * Unit : String factor
 * `subject_ID`
     * Subject (individual) participating to study.
-    * Field does not contain real name but an Id tag
+    * Field does not contain real name but an ID tag
         * Its range is from 1 to 30
     * Type : integer
     * Unit : NA, identifier
